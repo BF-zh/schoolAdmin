@@ -1,5 +1,5 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-  const fullpath = to.fullPath.replace(/\/+$/, '') // 删除路径最后的 /
-  if (!fullpath.startsWith('/welcome') && to.name !== 'login')
-    return navigateTo('/welcome/login')
+  const path = to.path.replace(/^\/+/, '') // Remove leading slashes
+  if (!path.startsWith('/wecome') || to.name !== 'login')
+    return navigateTo('/wecome/login')
 })
