@@ -34,6 +34,8 @@ const formData = reactive<FormData>({
 function changeState(state: ExtractField<FormData, 'state'>): void {
   formData.state = state
   resetForm(formRef.value)
+  console.log(123);
+  
 }
 
 /**
