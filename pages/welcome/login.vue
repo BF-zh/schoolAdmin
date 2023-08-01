@@ -41,7 +41,10 @@ function handleSubmit(formEl: FormInstance | undefined) {
     return
   formEl.validate((valid) => {
     if (valid) {
-      console.log('submit!')
+      useFetch('/api/user/update', {
+        body: { ...formData },
+        method: 'POST',
+      })
     }
     else {
       console.log('error submit!')
@@ -49,6 +52,7 @@ function handleSubmit(formEl: FormInstance | undefined) {
     }
   })
 }
+console.log('i love you')
 </script>
 
 <template>

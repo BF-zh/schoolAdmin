@@ -2,14 +2,15 @@ export function useGoTo() {
   const router = useRouter()
   // 跳转到登录页
   function goToLogin() {
-    router.push('/wecome/login')
+    router.push('/welcome/login')
   }
   function goToRegister() {
-    router.push('/wecome/register')
+    router.push('/welcome/register')
   }
   function goToForgot() {
-    router.push('/wecome/forgot')
+    router.push('/welcome/forgot')
   }
+
   return {
     goToLogin,
     goToRegister,
